@@ -40,7 +40,7 @@ const fewCountries = country => {
 
   const countries = country
     .map(countryName => {
-      return `<li><img src="${countryName.flags.svg}" alt="${countryName.flags.alt} width="17" height="17"><p> ${countryName.name.official}</p></li>`;
+      return `<li><img src="${countryName.flags.svg}" alt="${countryName.flags.alt}" width="25" height="auto"><p> ${countryName.name.official}</p></li>`;
     })
     .join(' ');
 
@@ -52,7 +52,7 @@ const oneCountry = country => {
 
   const countries = country
     .map(countryName => {
-      return `<li>
+      return `
        <h2 style="font-size: 40px"><img src="${countryName.flags.svg}" alt="${
         countryName.flags.alt
       } width="30" height="30"> ${countryName.name.official}</h2>
@@ -62,8 +62,7 @@ const oneCountry = country => {
         <p><span style="font-weight: bold">Population:</span> ${countryName.population.toLocaleString()}</p>
         <p><span style="font-weight: bold">Languages:</span> ${Object.values(
           countryName.languages
-        ).join(', ')}</p>
-      </li>`;
+        ).join(', ')}</p>`;
     })
     .join(' ');
 
